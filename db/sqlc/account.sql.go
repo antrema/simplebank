@@ -126,7 +126,7 @@ func (q *Queries) ListAccounts(ctx context.Context, arg ListAccountsParams) ([]G
 		return nil, err
 	}
 	defer rows.Close()
-	var items []Golang014Account
+	items := []Golang014Account{}
 	for rows.Next() {
 		var i Golang014Account
 		if err := rows.Scan(
