@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS golang_014.entries;
+DROP TABLE IF EXISTS golang_014.transfers;
+DROP TABLE IF EXISTS golang_014.accounts;
+DROP TYPE IF EXISTS golang_014.Currency;
+DROP SCHEMA IF EXISTS golang_014;
