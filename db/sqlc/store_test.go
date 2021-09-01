@@ -120,7 +120,7 @@ func TestTransferTxDeadLock(t *testing.T) {
 	// Create transfers from account1 to account2
 	account1 := createRandomAccount(t)
 	account2 := createRandomAccount(t)
-	fmt.Println(">> before:", account1.Balance, account2.Balance)
+	// DEBUG fmt.Println(">> before:", account1.Balance, account2.Balance)
 
 	n := 10
 	amount := int64(10)
@@ -161,7 +161,7 @@ func TestTransferTxDeadLock(t *testing.T) {
 	updatedAccount2, err := store.GetAccount(context.Background(), account2.ID)
 	require.NoError(t, err)
 
-	fmt.Println(">> after:", updatedAccount1.Balance, updatedAccount2.Balance)
+	// DEBUG fmt.Println(">> after:", updatedAccount1.Balance, updatedAccount2.Balance)
 	require.Equal(t, account1.Balance, updatedAccount1.Balance)
 	require.Equal(t, account2.Balance, updatedAccount2.Balance)
 }
